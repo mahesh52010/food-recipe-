@@ -1,0 +1,194 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica Neue', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    transition: background-color 0.5s;
+}
+
+header {
+    background-color: #ff6347; /* Tomato color */
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 4px solid #e74c3c; /* Darker shade for separation */
+    position: relative; /* For positioning suggestions */
+    animation: header-animation 2s ease-in-out;
+    background-image: linear-gradient(to bottom, #ff6347, #e74c3c);
+}
+@keyframes header-animation {
+    0% {
+      transform: translateY(-100%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+
+h1 {
+    margin-bottom: 10px;
+    font-size: 2.5em;
+}
+
+#search-box {
+    width: 300px;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    margin-bottom: 20px; 
+    margin-bottom: 5px; /* Added margin for space between search box and suggestions */
+}
+
+#search-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #e74c3c; /* Darker red */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#search-btn:hover {
+    background-color: #c0392b; /* Even darker on hover */
+}
+
+main {
+    padding: 20px;
+    animation: main-animation 2s ease-in-out;
+}
+
+@keyframes main-animation {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+#recipes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+#recipe-details img {
+    width: 20%; /* Reduce the width of the image */
+    height: auto; /* Maintain the aspect ratio */
+    margin: 0 auto; /* Center the image */
+}
+
+.suggestions {
+    position: relative; /* Change from absolute to relative */
+    top: 0; /* Remove top positioning */
+    left: 0; /* Remove left positioning */
+    width: 100%; /* Make it full width */
+    margin-top: 10px; /* Add some margin to separate from search box */
+    padding: 10px; /* Add some padding for better appearance */
+    border: 1px solid #ddd;
+    background-color: white;
+    border-radius: 5px;
+    display: none; /* Hide by default */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.suggestion-item {
+    padding: 10px;
+    cursor: pointer;
+    color: black; /* Change text color to black */
+}
+
+
+.search-btn {
+    border-radius: 10px;
+  }
+
+.search-box {
+    border-radius: 10px;
+  }
+  
+.recipe {
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    width: 300px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.recipe:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.recipe img {
+    width: 100%;
+    height: 180px; /* Fixed height for uniformity */
+    object-fit: cover; /* Cover image properly */
+}
+
+.recipe-title {
+    padding: 15px;
+    font-size: 1.5em;
+    text-align: center;
+    background-color: #ffe6e6; /* Light red background */
+    border-bottom: 2px solid #ff6347; /* Match header color */
+    cursor: pointer;
+    border-radius: 10px 10px 0 0;
+}
+
+.recipe-details {
+    padding: 15px;
+    display: none;
+}
+
+h3 {
+    margin-top: 15px;
+    color: #2c3e50; /* Darker text for headings */
+}
+h1, h2, h3 {
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  }
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+li {
+    background: #f9f9f9;
+    margin: 5px 0;
+    padding: 8px;
+    border-radius: 4px;
+    border-left: 4px solid #ff6347; /* Indicator line */
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #ff6347; /* Same as header */
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    background-image: linear-gradient(to bottom, #ff6347, #e74c3c);
+}
+.suggestion-item:hover {
+    background-color: #f2f2f2;
+    color: #333;
+    text-decoration: underline;
+  }
+  .recipe-title:hover {
+    background-color: #ffe6e6;
+    color: #333;
+    text-decoration: underline;
+  }
